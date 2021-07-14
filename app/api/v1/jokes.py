@@ -11,7 +11,7 @@ router = APIRouter()
 @router.get("", response_model=List[schemas.JokeResponse])
 def read_jokes() -> Any:
     """
-    Retrieve all products.
+    Retrieve a single joke
     """
 
     joke = Joke().get_new_joke()
