@@ -3,6 +3,7 @@ from typing import Any, List
 from fastapi import APIRouter
 
 from app import schemas
+from app.models import Joke
 
 router = APIRouter()
 
@@ -13,10 +14,6 @@ def read_jokes() -> Any:
     Retrieve all products.
     """
 
-    joke = {
-        'id': 3,
-        'the_joke': 'I went to buy some camouflage trousers the other day',
-        'the_punchline': "but I couldn't find any"
-    }
+    joke = Joke().get_new_joke()
 
     return [joke]

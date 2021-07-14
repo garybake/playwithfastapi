@@ -5,5 +5,7 @@ from pydantic import BaseModel
 
 class JokeResponse(BaseModel):
     id: Optional[int]
-    the_joke: Optional[str]
-    the_punchline: Optional[str]
+    type: Optional[str]
+    setup: Optional[str]
+    punchline: Optional[str]
+    status: str
