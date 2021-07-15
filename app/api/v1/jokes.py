@@ -9,7 +9,7 @@ router = APIRouter()
 
 
 @router.get("", response_model=List[schemas.JokeResponse])
-def read_jokes() -> Any:
+async def read_jokes() -> Any:
     """
     Retrieve a single joke
     """

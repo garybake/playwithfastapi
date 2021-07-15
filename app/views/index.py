@@ -10,5 +10,5 @@ router = APIRouter()
 
 
 @router.get("", response_class=HTMLResponse)
-def render_index(request: Request) -> Any:
+async def render_index(request: Request) -> Any:
     return templates.TemplateResponse("index.html", {"request": request})
