@@ -16,4 +16,3 @@ async def read_jokes() -> Any:
 
     joke = Joke().get_new_joke()
     return [joke]
-

@@ -1,6 +1,9 @@
 from typing import Dict
+import logging
 
 import requests
+
+logger = logging.getLogger('jokes-logger')
 
 
 class Joke:
@@ -14,6 +17,8 @@ class Joke:
         try:
             req = requests.get(cls._url)
         except requests.exceptions.RequestException as e:
+            logger.error(f'request: {cls._url}')
+            logger.error(e)
             joke_fail = cls._fail_resp
             return joke_fail
 
