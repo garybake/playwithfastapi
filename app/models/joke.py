@@ -4,7 +4,7 @@ import requests
 
 
 class Joke:
-    _url = 'https://official-joke-api.appspotxx.com/random_joke'
+    _url = 'https://official-joke-api.appspot.com/random_joke'
 
     _fail_resp = {'status': 'failure'}
 
