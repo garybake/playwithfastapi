@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}JokeTime{% endblock %}
+
+
+{% block page_content %}
+<div class="container-fluid">
+    <div class="page-header">
+        <h1>Its Joke Time!</h1>
+
+    </div>
+    <div>
+        <form>
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                <label for="floatingTextarea2">Enter joke labels...</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <div>
+        <table id="output_table" class="table">
+            <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Type</th>
+                <th scope="col">Setup</th>
+                <th scope="col">Punchline</th>
+                <th scope="col">Status</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <button id="downloadcsv" class="btn btn-primary">Download</button>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+{% endblock %}

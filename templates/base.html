@@ -2,26 +2,34 @@
 
 {% block title %}Jokes{% endblock %}
 
+{% block head %}
+{{ super() }}
+<link rel="shortcut icon" href="{{ url_for('static', path='/favicon.ico') }}" type="image/x-icon">
+<link rel="icon" href="{{ url_for('static', path='/favicon.ico') }}" type="image/x-icon">
+<link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+{% endblock %}
+
 {% block navbar %}
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Logo</a>
+    <a class="navbar-brand" href="{{ url_for('render_index') }}"><img class="align-top" height=30 src="{{ url_for('static', path='/logo.png') }}"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="{{ url_for('render_index') }}">Home</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Menu
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Small</a></li>
-            <li><a class="dropdown-item" href="#">Medium</a></li>
-            <li><a class="dropdown-item" href="#">Large</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('render_joke') }}">New Joke</a></li>
+            <li><a class="disabled dropdown-item" href="#">Small</a></li>
+            <li><a class="disabled dropdown-item" href="#">Medium</a></li>
+            <li><a class="disabled dropdown-item" href="#">Large</a></li>
           </ul>
         </li>
 
