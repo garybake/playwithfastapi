@@ -23,7 +23,7 @@ function processLabel(qryLabel) {
      */
     if (qryLabel != '') {
         var encodedQry = encodeURIComponent(qryLabel);
-        var url = '/api/v1/jokes?label='.concat(encodedQry);
+        var url = '/api/v1/jokes?joke_type='.concat(encodedQry);
         $.get(url, function( data ) {
             addJokeToTable(data[0])
         });
