@@ -13,6 +13,10 @@ https://official-joke-api.appspot.com/random_joke
     uvicorn app.main:app   
     python -m app.main
 
+For the locations page you will need to add the following env key from mapbox.com  
+`MAPBOX_API_KEY`
+
+
 ## Dev
 
     pip install -r requirements-dev.txt 

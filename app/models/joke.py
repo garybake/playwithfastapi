@@ -15,9 +15,7 @@ class Joke:
 
     @classmethod
     def get_new_joke(cls, joke_type) -> Dict:
-        # print(joke_type)
         url = cls._url + joke_type + "/random"
-        print(url)
         try:
             req = requests.get(url)
         except requests.exceptions.RequestException as e:
