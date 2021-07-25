@@ -8,7 +8,6 @@ client = TestClient(app)
 
 
 class TestJokeAPI(TestCase):
-
     def test_api_get_joke(self):
         """
         TODO mock out requests
@@ -18,8 +17,8 @@ class TestJokeAPI(TestCase):
         assert response.status_code == 200
         rjson = response.json()[0]
 
-        assert 'id' in rjson
-        assert 'type' in rjson
-        assert 'setup' in rjson
-        assert 'punchline' in rjson
-        assert 'status' in rjson
+        assert "id" in rjson
+        assert "type" in rjson
+        assert "setup" in rjson
+        assert "punchline" in rjson
+        assert "status" in rjson
