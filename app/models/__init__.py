@@ -1,1 +1,1 @@
-from app.models.joke import Joke
+from app.models.joke import Joke  # noqa: F401
