@@ -17,3 +17,8 @@ async def render_index(request: Request) -> Any:
 @router.get("/joke", response_class=HTMLResponse)
 async def render_joke(request: Request) -> Any:
     return templates.TemplateResponse("joke.html", {"request": request})
+
+
+@router.get("/locations", response_class=HTMLResponse)
+async def render_locations(request: Request) -> Any:
+    return templates.TemplateResponse("locations.html", {"request": request})
