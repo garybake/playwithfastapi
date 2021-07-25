@@ -12,3 +12,17 @@ https://official-joke-api.appspot.com/random_joke
 
     uvicorn app.main:app   
     python -m app.main
+
+## Dev
+
+    pip install -r requirements-dev.txt 
+    pre-commit install
+
+Precommit runs the following
+ - Black
+ - Flake8
+
+## TODO
+ - Split out dev requirements
+ - Add tests
+ - Add maps to front end
