@@ -1,12 +1,13 @@
 import logging
 import os
+from typing import Dict
 
 logger = logging.getLogger("jokes-logger")
 
 
 class LocationKey:
     @staticmethod
-    def get_location_key() -> str:
+    def get_location_key() -> Dict[str, str]:
         env_key = os.getenv("MAPBOX_API_KEY")
         if env_key:
             ret_dict = {"key": env_key, "status": "success"}
